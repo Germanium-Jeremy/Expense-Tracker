@@ -1,0 +1,96 @@
+@media screen and (min-width: 720px) {
+     #design1 {
+          top: -60%;
+     }
+
+     /* INTRO DISPLAY DIV */
+     .intro {
+          padding: 3rem 5rem;
+     }
+     .intro p {
+          font-size: 20px;
+     }
+     .intro #username {
+          font-size: 25px;
+     }
+     .intro .editName {
+          /* padding: .8rem 2rem; */
+          box-shadow: 2px 3px 6px #303;
+          font-size: 20px;
+          border-radius: 30px;
+     }
+
+     /* TOTAL DISPLAY DIV */
+     .total {
+          padding: 3rem 4rem;
+          margin: 0% 5rem;
+     }
+     .total > div > h2 {
+          font-size: 25px;
+     }
+     .total > div #totalExpense {
+          font-size: 25px;
+     }
+     .total img {
+          width: 10rem;
+          height: 10rem;
+     }
+
+     /* LISTING EXPENSES */
+     .listExpense {
+          padding: 3rem 5rem;
+          margin: 4rem 5rem;
+     }
+     .title h2 {
+          font-size: 25px;
+     }
+     .title button, .addExpense button {
+          /* padding: .8rem 2rem; */
+          box-shadow: 2px 3px 6px #303;
+     }
+     #theExpenses {
+          padding: 2rem 0;
+     }
+     #theExpenses .expense {
+          padding: 2rem 0;
+     }
+     #theExpenses .expense .content > div:first-child > h2 {
+          font-size: 20px;
+     }
+     #theExpenses .expense .content > div:first-child > span {
+          font-size: 20px;
+     }
+     #theExpenses .expense .content .amoutExpense {
+          font-size: 20px;
+     }
+     #theExpenses .expense .actions button {
+          /* padding: .8rem 2rem; */
+          box-shadow: 2px 3px 6px #303;
+          font-size: 20px;
+     }
+
+     /* FORM TO ADD EXPENSES */
+     .addExpense {
+          padding: 3rem 4rem;
+     }
+     .addExpense div label, .addExpense div input {
+          font-size: 20px;
+     }
+
+     /* FOOTER  */
+     footer {
+          font-size: 25px;
+     }
+}
+
+@media screen and (min-width: 1024px) {
+     .intro {
+          padding: 3rem 30rem;
+     }
+     .total {
+          margin: 2% 25rem;
+     }
+     .listExpense {
+          margin: 2% 25rem;
+     }
+}
