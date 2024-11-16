@@ -42,21 +42,23 @@ const formatDate = (dateString) => {
      const diff = now.getTime() - date.getTime();
    
      if (diff < 24 * 60 * 60 * 1000) {
-          // Less than 24 hours ago
+       // Less than 24 hours ago
           if (diff < 60 * 60 * 1000) {
           // Less than 1 hour ago
                const minutes = Math.floor(diff / (60 * 1000));
                return `Today, ${minutes} min ago`;
           } else {
-               const hours = Math.floor(diff / (60 * 60 * 1000));
-               return `Today, ${hours}:${date.getMinutes().toString().padStart(2, '0')} H`;
+               const hours = date.getHours();
+               const minutes = date.getMinutes().toString().padStart(2, '0');
+               return `Today, ${hours}:${minutes} H`;
           }
      } else if (diff < 48 * 60 * 60 * 1000) {
-          // Less than 48 hours ago
-          const hours = Math.floor(diff / (60 * 60 * 1000));
-          return `Yesterday, ${hours}:${date.getMinutes().toString().padStart(2, '0')} H`;
+       // Less than 48 hours ago
+          const hours = date.getHours();
+          const minutes = date.getMinutes().toString().padStart(2, '0');
+          return `Yesterday, ${hours}:${minutes} H`;
      } else {
-          // More than 48 hours ago
+       // More than 48 hours ago
           const options = { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' };
           return date.toLocaleString('en-US', options);
      }
@@ -101,7 +103,7 @@ expenseForm.addEventListener('submit', (e) => {
      e.preventDefault();
      const name = document.getElementById('expenseName').value.trim();
      const amount = parseFloat(document.getElementById('expenseAmount').value);
-     const date = new Date().toLocaleDateString();
+     const date = new Date().toLocaleString();
 
      if (name && amount > 0) {
           expenses.push({ name, amount, date });
